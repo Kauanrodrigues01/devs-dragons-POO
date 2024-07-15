@@ -1,4 +1,5 @@
 import { Personagem } from '../modules/personagem.js'
+import { mostrarModal } from './modal.js'
 
 export class PersonagemView {
     personagens
