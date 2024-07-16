@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link href="https://fonts.googleapis.com/css2?family=Smythe&family=UnifrakturMaguntia&display=swap"
+        rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/novo-personagem.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Adicionar Personagem</h2>
+        <form id="formNovoPersonagem">
+            <div>
+                <div class="container_input">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required placeholder="digite o nome" minlength="3" maxlength="15">
+                </div>
+                <span class="mensagem-erro"></span>
+            </div>
+            <div>
+                <div class="container_input">
+                    <label for="level">Level:</label>
+                    <input type="number" id="level" name="level" required placeholder="digite o level" minlength="1" maxlength="10">
+                </div>
+                <span class="mensagem-erro"></span>
+            </div>
+            <div>
+                <div class="container_input">
+                    <label for="descricao">Descrição:</label>
+                    <input type="text" id="descricao" name="descricao" required placeholder="adicione uma descrição">
+                </div>
+                <span class="mensagem-erro"></span>
+            </div>
+            <div>
+                <div class="container_input">
+                    <label for="tipo">Tipo:</label>
+                    <select name="tipo" id="tipo" required>
+                        <option value="" disabled selected>Selecione o tipo</option>
+                        <option value="Mago">Mago</option>
+                        <option value="Guerreiro">Guerreiro</option>
+                        <option value="Arqueiro">Arqueiro</option>
+                        <option value="ArqueiroMago">Arqueiro-Mago</option>
+                    </select>
+                </div>
+                <span class="mensagem-erro"></span>
+            </div>
+            <button type="submit" type="module">Adicionar</button>
+        </form>
+    </div>
+    <script src="../validar-formulario.js"></script>
+    <script type="module" src="../index.js"></script>
+</body>
+</html>

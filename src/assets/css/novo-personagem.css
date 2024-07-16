@@ -1,0 +1,103 @@
+:root {
+    --fonte-titulo-cartas: 'UnifrakturMaguntia', cursive;
+    --fonte-textos: 'Smythe', cursive;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-image: url(../img/fundo-madeira.png);
+    color: #E2BD4A;
+}
+
+h2{
+    font-family: var(--fonte-titulo-cartas);
+    font-size: 3rem;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+.container_input{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+label{
+    font-family: var(--fonte-textos);
+    font-size: 1.5rem;
+    margin: 0.5rem;
+    width: 70px;
+    text-align: center;
+}
+
+input, select{
+    font-family: var(--fonte-textos);
+    font-size: 1rem;
+    padding: 0.2rem;
+    margin: 0.5rem;
+}
+
+input{
+    appearance: none;
+    width: 200px;
+    background: transparent;
+    border: none;
+    border: 1px solid #E2BD4A;
+    border-radius: 7px;
+    color: white;
+}
+
+input:focus{
+    outline: none;
+}
+
+input::placeholder{
+    color: rgba(255, 255, 255, 0.493);
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+select{
+    width: 200px;
+    background: transparent;
+    border: none;
+    border: 1px solid #E2BD4A;
+    border-radius: 7px;
+    color: white;
+}
+
+select:focus{
+    outline: none;
+    color: black;
+}
+
+button{
+    font-family: var(--fonte-textos);
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    margin: 1rem;
+    background: #E2BD4A;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    cursor: pointer;
+}
+
+.mensagem-erro{
+    font-family: var(--fonte-textos);
+    font-size: 1.2rem;
+    color: red;
+    margin: 1rem;
+}

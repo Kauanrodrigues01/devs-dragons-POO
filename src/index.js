@@ -36,3 +36,39 @@ const personagens = [
 ]
 
 const baralho = new PersonagemView(personagens)
+
+const form = document.querySelector('form')
+
+form.addEventListener('submit', (event) => {
+    debugger
+    event.preventDefault()
+    const listaRespostas = { // Armazena as respostas do formulário
+        "nome": event.target.elements["nome"].value,
+        "level": parseInt(event.target.elements["level"].value),
+        "descricao": event.target.elements["descricao"].value,
+        "tipo": event.target.elements["tipo"].value,
+    }
+
+    criaNovoPersonagem(listaRespostas)
+
+    form.reset()
+
+    window.location.href = "../index.html"
+})
+
+function criaNovoPersonagem(listaRespostas) {
+    let novoPersonagem
+
+    if (listaRespostas.tipo == 'mago') {
+        novoPersonagem = new Mago(listaRespostas.nome, listaRespostas.level, listaRespostas.descricao)
+    } else if (listaRespostas.tipo == 'arqueiro') {
+        novoPersonagem = new Arqueiro(listaRespostas.nome, listaRespostas.level, listaRespostas.descricao)
+    } else if (listaRespostas.tipo == 'arqueiro-mago') {
+        novoPersonagem = new ArqueiroMago(listaRespostas.nome, listaRespostas.level, listaRespostas.descricao)
+    } else {
+        novoPersonagem = new Guerreiro(listaRespostas.nome, listaRespostas.level, listaRespostas.descricao)
+    }
+
+    personagens.push(novoPersonagem)
+    const personagemView = new PersonagemView(personagens)
+}
