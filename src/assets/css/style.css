@@ -44,6 +44,7 @@ header {
 .personagens {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 1.5rem;
     max-width: 1357px;
 }
@@ -309,4 +310,33 @@ header {
 .ArqueiroMago .imagem {
     background-image: url(../img/arqueiro-mago.png);
     background-repeat: no-repeat;
+}
+
+.botao-adicionar{
+    background: linear-gradient(180deg, #FAEC75 0%, #CE9424 100%);
+    border: 2px solid #6C3F00;
+    border-radius: 16px;
+    font-family: var(--fonte-titulo-cartas);
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31px;
+    padding: 8px 36px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+header{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header div{
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
 }

@@ -20,6 +20,11 @@ export class PersonagemView {
             this.ulPersonagens.appendChild(personagemLI)
         })
     }
+
+    renderNewPersonagem(personagem) {
+        const personagemLI = this.criaPersonagem(personagem)
+        this.ulPersonagens.appendChild(personagemLI)
+    }
     
     criaPersonagem = (personagem) => {
         const personagemLI = document.createElement('li')
